@@ -69,6 +69,8 @@ table {
 	border-spacing: 0;
 }
 
+@import "grid";
+
 //***** DEMO STYLE */////
 html, body {
 	font-family: "opensans regular", sans-serif;
@@ -80,6 +82,22 @@ html, body {
 h1,h2,h3,h4,h5,h6 {
 	font-family: "opensans bold";
 	letter-spacing: 0;
+}
+
+p {
+	font-size: 16px;
+	line-height: 22px;
+	margin-bottom: 12px;
+}
+
+pre, code {
+	color: #777;
+	background: #e7e5e0;
+	border-left: 3px solid #d7d5cb;
+	font-family: Monospace;
+	line-height: 20px;
+	display: block;
+	padding: 20px 10px;
 }
 
 .author {
@@ -103,11 +121,12 @@ h1,h2,h3,h4,h5,h6 {
 	background-color: #fff;
 }
 
-.form-content__body, .form-content__footer {
+.form-content__body {
 	padding: 30px 20px;
 }
 
 .form-content__footer {
+	padding: 15px 20px;
 	background-color: darken(#f6f6f6, 3.5%);
 	> a {
 		color: #303338;
@@ -126,6 +145,15 @@ h1,h2,h3,h4,h5,h6 {
 	line-height: 28px;
 }
 
+.input-label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.input-group {
+	margin-bottom: 12px;
+}
+
 .list {
 	list-style: circle;
 	padding-left: 20px;
@@ -139,6 +167,10 @@ h1,h2,h3,h4,h5,h6 {
 	font-size: 34px;
 	line-height: 30px;
 	color: $primary-color;
+	text-align: center;
+}
+
+.text-center {
 	text-align: center;
 }
 

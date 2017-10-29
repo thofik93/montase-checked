@@ -2,7 +2,7 @@
   MONTASE CHECK COMPONENT 
 */
 if (typeof jQuery === 'undefined') {
-  throw new Error('Montase checked\'s JavaScript requires jQuery')
+  throw new Error('Montase checked\'s Plugin requires jQuery')
 }
 
 (function($){
@@ -90,9 +90,9 @@ if (typeof jQuery === 'undefined') {
   function Plugin(option) {
     return this.each(function () {
       var $this = $(this)
-      var data  = $this.data('zzz.checkbox')
+      var data  = $this.data('ui.checkbox')
 
-      if (!data) $this.data('zzz.checkbox', (data = new MontaseCheck(this)))
+      if (!data) $this.data('ui.checkbox', (data = new MontaseCheck(this)))
       if (typeof option == 'string') data[option].call($this)
     })
   }
@@ -102,13 +102,13 @@ if (typeof jQuery === 'undefined') {
 
   // CHECKBOX DATA-API
   // ==============
-  $('[data-zzz="montasecheck"]').each(function () {
-    $(this).on('click.zzz.checkbox.data-api', MontaseCheck.prototype.toggleChecked)
+  $('[data-ui="montasecheck"]').each(function () {
+    $(this).on('click.ui.checkbox.data-api', MontaseCheck.prototype.toggleChecked)
   })
   
 
   $(window).on('load', function () {
-      $('[data-zzz="montasecheck"]').each(function () {
+      $('[data-ui="montasecheck"]').each(function () {
         var $checkbox = $(this)
         MontaseCheck.prototype.buildDOM(this)
       })
