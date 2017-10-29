@@ -1,0 +1,153 @@
+$primary-color: #63CE58;
+
+@font-face {
+  font-family: 'opensans regular';
+  src: url('../fonts/OpenSans-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/OpenSans-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/OpenSans-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/OpenSans-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/OpenSans-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'opensans bold';
+  src: url('../fonts/OpenSans-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/OpenSans-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/OpenSans-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/OpenSans-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/OpenSans-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+//***** DEMO STYLE */////
+html, body {
+	font-family: "opensans regular", sans-serif;
+	font-size: 16px;
+	color: #303338;
+	letter-spacing: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: "opensans bold";
+	letter-spacing: 0;
+}
+
+.author {
+	font-size: 16px;
+}
+
+.container {
+	width: 920px;
+	margin: 0 auto;
+}
+
+.demo-heading {
+	font-size: 24px;
+	margin: 40px 0 30px 0;
+}
+
+.form-content {
+	width: 920px;
+	margin: 0 auto;
+	margin-top: 40px;
+	background-color: #fff;
+}
+
+.form-content__body, .form-content__footer {
+	padding: 30px 20px;
+}
+
+.form-content__footer {
+	background-color: darken(#f6f6f6, 3.5%);
+	> a {
+		color: #303338;
+	}
+}
+
+.form-content__header {
+	background-color: $primary-color;
+	color: #fff;
+	text-align: center;
+	padding: 15px 0;
+}
+
+.form-content__heading {
+	font-size: 22px;
+	line-height: 28px;
+}
+
+.list {
+	list-style: circle;
+	padding-left: 20px;
+	font-size: 16px;
+	li {
+		line-height: 28px;
+	}
+}
+
+.plugin-name {
+	font-size: 34px;
+	line-height: 30px;
+	color: $primary-color;
+	text-align: center;
+}
+
+.text-link {
+	color: #0e8fff;
+}
+
+.wrapper {
+	padding: 60px 0;
+	background-color: #f6f6f6;
+}
+

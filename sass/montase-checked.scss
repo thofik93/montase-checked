@@ -1,0 +1,283 @@
+$default-color: #f5f5f5;
+$success-color: #63CE58;
+$danger-color: #E26A6A;
+$sky-color: #26a1ab;
+$warning-color: #ff9800;
+
+.checkbox-flat, .radio-flat {
+	display: block;
+	cursor: pointer;
+	font-size: 14px;
+	color: #000;
+	margin-right: 15px;
+}
+
+.checkbox-flat_full, .radio-flat_full {
+	border-color: #d9d9d9;
+	&.is-active {
+		span {
+			background-color: #d9d9d9;
+		}
+	}
+		
+}
+
+*[data-ui="montasecheck"] {
+	position:  relative;
+	padding-left: 25px;
+	&.is-active {
+		span {
+			&:after {
+				display: block;
+			}
+		}
+	}
+	> input[type="checkbox"], input[type="radio"] {
+		position: absolute;
+    z-index: -1;
+    opacity: 0;
+	}
+	span {
+		position: absolute;
+	  top: 0;
+	  left: 0;
+	  height: 18px;
+	  width: 18px;
+		border: 1px solid #d9d9d9;
+	}	
+}
+
+.checkbox-flat {
+	span {
+		&:after {
+			content: " ";
+			position: absolute;
+			display: none;
+			left: 6px;
+			top: 2px;
+			width: 5px;
+			height: 10px;
+			border: solid #888;
+			border-width: 0 2px 2px 0;
+			transform: rotate(45deg);
+		}
+	}
+}
+
+.radio-flat {
+	span {
+		border-radius: 50%;
+		&:after {
+			content: " ";
+			position: absolute;
+			display: none;
+			left: 5px;
+		  top: 5px;
+		  height: 6px;
+		  width: 6px;
+		  border-radius: 100%;
+		  background: #888;
+		}
+	}
+}
+
+.checkbox-flat_theme-danger {
+	span {
+		border-color: $danger-color;
+		&:after {
+			border-color: $danger-color;
+		}
+	}
+}
+
+.checkbox-flat_theme-sky {
+	span {
+		border-color: $sky-color;
+		&:after {
+			border-color: $sky-color;
+		}
+	}
+}
+
+.checkbox-flat_theme-success {
+	span {
+		border-color: $success-color;
+		&:after {
+			border-color: $success-color;
+		}
+	}
+}
+
+.checkbox-flat_theme-warning {
+	span {
+		border-color: $warning-color;
+		&:after {
+			border-color: $warning-color;
+		}
+	}
+}
+
+.checkbox-flat_full_theme-danger {
+	span {
+		border-color: $danger-color;
+	}
+	
+	&.is-active {
+		span {
+			background-color: $danger-color;
+			border-color: darken($danger-color, 2.5%);
+			&:after {
+				border-color: #fff;
+			}
+		}
+	}
+}
+
+.checkbox-flat_full_theme-sky {
+	span {
+		border-color: $sky-color;
+	}
+	
+	&.is-active {
+		span {
+			background-color: $sky-color;
+			border-color: darken($sky-color, 2.5%);
+			&:after {
+				border-color: #fff;
+			}
+		}
+	}
+}
+
+.checkbox-flat_full_theme-success {
+	span {
+		border-color: $success-color;
+	}
+	
+	&.is-active {
+		span {
+			background-color: $success-color;
+			border-color: darken($success-color, 2.5%);
+			&:after {
+				border-color: #fff;
+			}
+		}
+	}
+}
+
+.checkbox-flat_full_theme-warning {
+	span {
+		border-color: $warning-color;
+	}
+	
+	&.is-active {
+		span {
+			background-color: $warning-color;
+			border-color: darken($warning-color, 2.5%);
+			&:after {
+				border-color: #fff;
+			}
+		}
+	}
+}
+
+.checkbox-flat.is-disabled, .radio-flat.is-disabled {
+	cursor: not-allowed;
+	span {
+		background-color: #E6E6E6;
+		border: 1px solid transparent;
+		opacity: .6;
+	}
+}
+
+.radio-flat_theme-danger {
+	span {
+		&:after {
+			background-color: $danger-color;
+		}
+	}
+}
+
+.radio-flat_theme-sky {
+	span {
+		&:after {
+			background-color: $sky-color;
+		}
+	}
+}
+
+.radio-flat_theme-success {
+	span {
+		&:after {
+			background-color: $success-color;
+		}
+	}
+}
+
+.radio-flat_theme-warning {
+	span {
+		&:after {
+			background-color: $warning-color;
+		}
+	}
+}
+
+.radio-flat_full_theme-danger {
+	span {
+		border-color: $danger-color;
+	}
+	&.is-active {
+		span {
+			border-color: darken($danger-color, 2.5%);
+			background-color: $danger-color;
+			&:after {
+				background-color: #fff;
+			}
+		}
+	}
+}
+
+.radio-flat_full_theme-sky {
+	span {
+		border-color: $sky-color;
+	}
+	&.is-active {
+		span {
+			border-color: darken($sky-color, 2.5%);
+			background-color: $sky-color;
+			&:after {
+				background-color: #fff;
+			}
+		}
+	}
+}
+
+.radio-flat_full_theme-success {
+	span {
+		border-color: $success-color;
+	}
+	&.is-active {
+		span {
+			border-color: darken($success-color, 2.5%);
+			background-color: $success-color;
+			&:after {
+				background-color: #fff;
+			}
+		}
+	}
+}
+
+.radio-flat_full_theme-warning {
+	span {
+		border-color: $warning-color;
+	}
+	&.is-active {
+		span {
+			border-color: darken($warning-color, 2.5%);
+			background-color: $warning-color;
+			&:after {
+				background-color: #fff;
+			}
+		}
+	}
+}
