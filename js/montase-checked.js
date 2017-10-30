@@ -21,23 +21,27 @@ if (typeof jQuery === 'undefined') {
     e.stopPropagation();
     e.preventDefault();
 
-    MontaseCheck.prototype.isChecked(this)
+    MontaseCheck.prototype.isChecked(this, e)
 
   }
 
-  MontaseCheck.prototype.isChecked = function (el) {
+  MontaseCheck.prototype.isChecked = function (el, e) {
     var $el = $(el)
     var $input = $el.find('input');
     var inputType = $input.attr('type') 
+    var isActive = $el.is('.is-active')
 
     switch(inputType) {
       case 'checkbox': 
-        if($el.is('.is-active')) {
+        if(isActive) {
           $el.removeClass('is-active')
           $input.prop('checked', false)
-        } else {
+          $el.trigger(e = $.Event('unchecked.montase.checked'))
+        } 
+        else {
           $el.addClass('is-active')
           $input.prop('checked', true)
+          $el.trigger(e = $.Event('checked.montase.checked'))
         }
       break;
 
@@ -49,11 +53,14 @@ if (typeof jQuery === 'undefined') {
           .find('input[name="' + inputName + '"]')
           .parent().removeClass('is-active')
 
-        if($el.is('.is-active')) {
+        if(isActive) {
           $input.prop('checked', false)
-        } else {
+          $el.trigger(e = $.Event('unchecked.montase.checked'))
+        } 
+        else {
           $el.addClass('is-active')
           $input.prop('checked', true)
+          $el.trigger(e = $.Event('checked.montase.checked'))
         }
       break; 
     }
@@ -65,7 +72,7 @@ if (typeof jQuery === 'undefined') {
     var $checkbox = $containerCheckbox.find('input')
 
     if($checkbox.prop('disabled')) {
-      $(checkbox).off('click.zzz.checkbox.data-api')
+      $(checkbox).off('click.ui.checkbox.data-api')
       $containerCheckbox.addClass('is-disabled')
     }
 
