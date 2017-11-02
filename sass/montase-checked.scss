@@ -84,7 +84,6 @@ $warning-color: #ff9800;
 
 .checkbox-flat_theme-danger {
 	span {
-		border-color: $danger-color;
 		&:after {
 			border-color: $danger-color;
 		}
@@ -93,7 +92,6 @@ $warning-color: #ff9800;
 
 .checkbox-flat_theme-sky {
 	span {
-		border-color: $sky-color;
 		&:after {
 			border-color: $sky-color;
 		}
@@ -102,7 +100,6 @@ $warning-color: #ff9800;
 
 .checkbox-flat_theme-success {
 	span {
-		border-color: $success-color;
 		&:after {
 			border-color: $success-color;
 		}
@@ -111,7 +108,6 @@ $warning-color: #ff9800;
 
 .checkbox-flat_theme-warning {
 	span {
-		border-color: $warning-color;
 		&:after {
 			border-color: $warning-color;
 		}
@@ -119,10 +115,6 @@ $warning-color: #ff9800;
 }
 
 .checkbox-flat_full_theme-danger {
-	span {
-		border-color: $danger-color;
-	}
-	
 	&.is-active {
 		span {
 			background-color: $danger-color;
@@ -135,10 +127,6 @@ $warning-color: #ff9800;
 }
 
 .checkbox-flat_full_theme-sky {
-	span {
-		border-color: $sky-color;
-	}
-	
 	&.is-active {
 		span {
 			background-color: $sky-color;
@@ -151,10 +139,6 @@ $warning-color: #ff9800;
 }
 
 .checkbox-flat_full_theme-success {
-	span {
-		border-color: $success-color;
-	}
-	
 	&.is-active {
 		span {
 			background-color: $success-color;
@@ -167,10 +151,6 @@ $warning-color: #ff9800;
 }
 
 .checkbox-flat_full_theme-warning {
-	span {
-		border-color: $warning-color;
-	}
-	
 	&.is-active {
 		span {
 			background-color: $warning-color;
@@ -224,9 +204,6 @@ $warning-color: #ff9800;
 }
 
 .radio-flat_full_theme-danger {
-	span {
-		border-color: $danger-color;
-	}
 	&.is-active {
 		span {
 			border-color: darken($danger-color, 2.5%);
@@ -239,9 +216,6 @@ $warning-color: #ff9800;
 }
 
 .radio-flat_full_theme-sky {
-	span {
-		border-color: $sky-color;
-	}
 	&.is-active {
 		span {
 			border-color: darken($sky-color, 2.5%);
@@ -254,9 +228,6 @@ $warning-color: #ff9800;
 }
 
 .radio-flat_full_theme-success {
-	span {
-		border-color: $success-color;
-	}
 	&.is-active {
 		span {
 			border-color: darken($success-color, 2.5%);
@@ -269,9 +240,6 @@ $warning-color: #ff9800;
 }
 
 .radio-flat_full_theme-warning {
-	span {
-		border-color: $warning-color;
-	}
 	&.is-active {
 		span {
 			border-color: darken($warning-color, 2.5%);
