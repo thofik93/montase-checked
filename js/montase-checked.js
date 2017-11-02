@@ -13,6 +13,8 @@ if (typeof jQuery === 'undefined') {
     $(el).on('click', checkbox, this.toggleChecked)
   }
 
+  MontaseCheck.previousTarget = {}
+
   MontaseCheck.VERSION = '0.0.1[BETA VERSION]'
 
   MontaseCheck.AUTHOR = 'THOFIK WIRANATA - thofikwiranata15@gmail.com'
@@ -20,9 +22,7 @@ if (typeof jQuery === 'undefined') {
   MontaseCheck.prototype.toggleChecked = function (e) {
     e.stopPropagation();
     e.preventDefault();
-
     MontaseCheck.prototype.isChecked(this, e)
-
   }
 
   MontaseCheck.prototype.isChecked = function (el, e) {
@@ -49,6 +49,12 @@ if (typeof jQuery === 'undefined') {
         var inputName = $input.attr('name')
         var $form = $input.closest('form')
 
+        if(MontaseCheck.previousTarget.hasOwnProperty(inputName) ) {
+          if(el === MontaseCheck.previousTarget[inputName]) return 
+        }
+        
+        MontaseCheck.previousTarget[inputName] = el
+
         $form
           .find('input[name="' + inputName + '"]')
           .parent().removeClass('is-active')
@@ -64,7 +70,8 @@ if (typeof jQuery === 'undefined') {
         }
       break; 
     }
-    
+
+   
   }
 
   MontaseCheck.prototype.isState = function(checkbox) {
