@@ -13,8 +13,6 @@ if (typeof jQuery === 'undefined') {
     $(el).on('click', checkbox, this.toggleChecked)
   }
 
-  MontaseCheck.previousTarget = {}
-
   MontaseCheck.VERSION = '0.0.1[BETA VERSION]'
 
   MontaseCheck.AUTHOR = 'THOFIK WIRANATA - thofikwiranata15@gmail.com'
@@ -49,29 +47,19 @@ if (typeof jQuery === 'undefined') {
         var inputName = $input.attr('name')
         var $form = $input.closest('form')
 
-        if(MontaseCheck.previousTarget.hasOwnProperty(inputName) ) {
-          if(el === MontaseCheck.previousTarget[inputName]) return 
-        }
-        
-        MontaseCheck.previousTarget[inputName] = el
+        if(!isActive) {
+          $form
+            .find('input[name="' + inputName + '"]')
+            .parent().removeClass('is-active')
 
-        $form
-          .find('input[name="' + inputName + '"]')
-          .parent().removeClass('is-active')
-
-        if(isActive) {
-          $input.prop('checked', false)
-          $el.trigger(e = $.Event('unchecked.montase.checked'))
-        } 
-        else {
           $el.addClass('is-active')
           $input.prop('checked', true)
           $el.trigger(e = $.Event('checked.montase.checked'))
-        }
+        } 
+
       break; 
     }
-
-   
+  
   }
 
   MontaseCheck.prototype.isState = function(checkbox) {
@@ -111,7 +99,7 @@ if (typeof jQuery === 'undefined') {
     })
   }
 
-  $.fn.montasecheck             = Plugin
+  $.fn.montasecheck               = Plugin
   $.fn.montasecheck.Constructor   = MontaseCheck
 
   // CHECKBOX DATA-API
